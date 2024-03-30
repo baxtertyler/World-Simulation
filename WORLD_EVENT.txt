@@ -1,0 +1,22 @@
+Description file for my project 5 implementation
+
+1) how to trigger event 
+
+Click the mouse on any location that is 
+-not currently occupied by an entity
+-not out of bounds
+-not an obstacle
+^these must apply to the tile to the left and the right of the location clicked aswell
+*console will print out if a click was invalid
+
+2) what should happen when the event is triggered 
+
+Once the event is triggered, a cave will spawn where the mouse was clicked. This cave spawn includes three different entities: two gems and a hunter
+
+3) what the affected entities should do 
+
+The effected entities are DudeNotFull and DudeFull. Once a cave is spawned, if a dude does not already have a gem, he will stop doing what he is doing and path towards the cave. He will "mine" one of the gems and put it in top of his head. After this, he will have a gem on his head for the rest of the simulation and will no longer path to the gems when they spawn.
+
+4) what the new entity is and how it should behave
+
+The new entity is the hunter. This entity behaves by patching towards the nearest fairy. Once the hunter is 1 tile away from the fairy, he will taze a.k.a. stun the fairy. For 5 seconds, the fairy will not move and will appear in a blue scale of colors. During this time, this fairy is not an option for the hunter to path to. After the 5 seconds, the fairy will return back to normal and will be a valid option for the hunter to path to again.
